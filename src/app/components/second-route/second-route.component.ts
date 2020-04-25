@@ -8,8 +8,13 @@ import { take } from 'rxjs/operators';
   styleUrls: ['./second-route.component.css']
 })
 export class SecondRouteComponent implements OnInit {
+  message = `We have no info about your request`;
+
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router) {
+    if (!!localStorage.getItem('token')) {
+      this.message = 'We got your info covered!';
+    }
   }
 
   ngOnInit(): void {

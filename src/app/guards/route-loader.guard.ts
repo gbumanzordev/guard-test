@@ -7,8 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class RouteLoaderGuard implements CanActivate {
 
-  constructor(private router: Router) {
-  }
+  constructor(private router: Router) {}
 
   canActivate(
     next: ActivatedRouteSnapshot,
